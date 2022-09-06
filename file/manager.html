@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت</title>
+    <link rel="stylesheet" href="style/style2.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <div class="main">
+
+   
+        <div class="addostad">
+            
+           <form action="" name="ostad" onsubmit="return ostadfun1()">
+               <input type="text" placeholder="نام استاد" class="addinput" name="osnameitem" required>
+               <input type="text" placeholder="فامیلی استاد" class="addinput" name="osfamilyitem" required>
+            <input type="text" placeholder="شاخه علمی" class="addinput" name="osmajoritem" required>
+
+               <select name="osselect1" class="myselcet">
+                <option value="مرد" selected>
+                    مرد
+                </option>
+                <option value="زن">
+                    زن
+                </option>
+            </select>
+
+               <input type="text" placeholder="سال تولد" class="addinput" name="osbornitem" required>
+               <input type="submit" value="افزودن" class="formsub">
+           </form>
+
+        </div>
+
+        <div class="adddaneshjo">
+
+            <form action="" name="student" onsubmit="return studentfun1()">
+                <input type="text" placeholder="نام دانشجو" class="addinput" name="stunameitem" required>
+                <input type="text" placeholder="فامیلی دانشجو" class="addinput" name="stufamilyitem" required>
+                <input type="text" placeholder="کد ملی" class="addinput" name="stunumitem" pattern="[0-9]{10}" required>
+                <input type="text" placeholder="رشته" class="addinput" name="stumajoritem" required>
+                <select name="stuselect1" class="myselcet">
+                    <option value="مرد" selected>
+                        مرد
+                    </option>
+                    <option value="زن">
+                        زن
+                    </option>
+                </select>
+                <input type="text" placeholder="سال تولد" class="addinput" name="stubornitem">
+            
+                <input type="submit" value="افزودن" class="formsub">
+            </form>
+
+         </div>
+
+        <div class="addbook">
+
+            <form action="" name="book" onsubmit="return bookfun1()">
+                <input type="text" placeholder="نام درس" class="addinput" name="booknameitem" required>
+                <select name="booktypeselect" class="myselcet">
+                    <option value="عملی" selected>
+                        عملی
+                    </option>
+                    <option value="نظری">
+                        نظری
+                    </option>
+                    <option value="ترکیبی">
+                        ترکیبی
+                    </option>
+                </select>
+                <input type="text" placeholder=" تعداد واحد " pattern="[0-6]{1}" required class="addinput" name="booknumitem">
+                <input type="submit" value="افزودن" class="formsub">
+            </form>
+
+        </div>
+
+<a  onclick="whyme()" class="spec-button">بازیابی اطلاعات</a>
+
+        <div class="listb" style="margin-top: 25px;">
+            <table id="mybooktable">
+
+                <tr>
+                    <th>حذف</th>
+                    <th>تعداد واحد</th>
+                    <th>نوع درس</th>
+                    <th>نام درس</th>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="listo" style="margin-top: 25px;">
+            <table id="myostable">
+
+                <tr>
+                    <th>حذف</th>
+                    <th>سن</th>
+                    <th>جنسیت</th>
+                    <th>شاخه علمی</th>
+
+                    <th>فامیلی استاد</th>
+                    <th>نام استاد</th>
+                </tr>
+
+            </table>
+        </div>
+
+  
+
+        <div class="listd" style="margin-top: 25px;">
+            <table id="mystutable">
+
+                <tr>
+                    <th>حذف</th>
+                    <th>سن</th>
+                    <th>جنسیت</th>
+                    <th>رشته</th>
+                    <th>شماره دانشجویی</th>
+                    <th>فامیلی دانشجو</th>
+                    <th>نام دانشجو</th>
+                </tr>
+
+            </table>
+        </div>
+
+      
+
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
